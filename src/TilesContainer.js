@@ -8,7 +8,8 @@ const TilesContainer = React.createClass({
 
         if(weatherObj.length !== 0) {
             let tiles = [];
-            for(let i = 0; i < weatherObj.data.length - 3; i++) {
+            // for the next six days
+            for(let i = 0; i < weatherObj.data.length - 2; i++) {
                 let weatherDataTile = weatherObj.data[i];
                 tiles.push(
                     <WeatherTile

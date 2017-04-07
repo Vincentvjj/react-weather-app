@@ -2,7 +2,7 @@ import React from 'react';
 import SearchBar from './SearchBar';
 import TilesContainer from './TilesContainer';
 import 'whatwg-fetch';
-
+import style from './main.css';
 
 const ForecastContainer = React.createClass({
     getInitialState() {
@@ -22,11 +22,8 @@ const ForecastContainer = React.createClass({
     },
 
     render() {
-        const style = {
-            "textAlign" : "center"
-        };
         return(
-            <div style={style}>
+            <div className={style.center}>
                 <SearchBar getWeatherObj={this.getWeatherObj}/><br/>
                 <TilesContainer weatherObj={this.state.weatherObj} />
             </div>

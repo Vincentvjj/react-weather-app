@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing test 1`] = `
+<div>
+  Lat: 
+  <input
+    className={undefined}
+    placeholder="lat"
+    type="text"
+  />
+  <br />
+  Long: 
+  <input
+    className={undefined}
+    placeholder="long"
+    type="text"
+  />
+  <br />
+  <button
+    onClick={[Function]}
+  >
+    Search
+  </button>
+</div>
+`;

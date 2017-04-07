@@ -1,11 +1,5 @@
 import React from 'react';
-
-const style = {
-    display: "inline-block",
-    width: "15%",
-    "textAlign": "center",
-    "borderStyle": "solid"
-};
+import style from './main.css';
 
 const WeatherTile = React.createClass({
 
@@ -13,9 +7,9 @@ const WeatherTile = React.createClass({
         this.convertUnixToDate();
         let iconUrl = require("./img/" + this.props.icon + ".png");
         return(
-            <div style={style}>
+            <div className={style.weatherTile}>
                 <h3>{this.convertUnixToDate()}</h3>
-                <img src={iconUrl}/><br/>
+                <img className={style.weatherIcon} src={iconUrl}/><br/>
                 <span>Status: {this.props.status}</span><br/>
                 <span>Max: {this.props.max}</span><br/>
                 <span>Min: {this.props.min}</span>

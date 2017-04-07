@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './main.css';
 
 const SearchBar = React.createClass({
     onClick() {
@@ -8,8 +9,10 @@ const SearchBar = React.createClass({
     render() {
         return(
             <div>
-                <input type="text" placeholder="lat" ref="lat"/>
-                <input type="text" placeholder="long" ref="long"/>
+                Lat: <input type="text" placeholder="lat" ref="lat" className={style["margin-bottom"]}/>
+                <br/>
+                Long: <input type="text" placeholder="long" ref="long" className={style["margin-bottom"]}/>
+                <br/>
                 <button onClick={this.onClick}>Search</button>
             </div>
         );
