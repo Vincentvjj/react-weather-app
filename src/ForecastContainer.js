@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import TilesContainer from './TilesContainer';
-import 'whatwg-fetch';
+import FetchJsonP from 'fetch-jsonp';
 import style from './main.css';
 
 const ForecastContainer = React.createClass({
@@ -12,7 +12,7 @@ const ForecastContainer = React.createClass({
     },
 
     getWeatherObj(lat, long) {
-        fetch("https://api.darksky.net/forecast/7f80521dd2878da15b216d99e588f1e5/" + lat + "," + long)
+        FetchJsonP("https://api.darksky.net/forecast/7f80521dd2878da15b216d99e588f1e5/" + lat + "," + long)
             .then((res) => {return res.json()})
             .then((json) => {
                 this.setState({
