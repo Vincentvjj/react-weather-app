@@ -12,7 +12,7 @@ const ForecastContainer = React.createClass({
     },
 
     getWeatherObj(lat, long) {
-        FetchJsonP("https://api.darksky.net/forecast/7f80521dd2878da15b216d99e588f1e5/" + lat + "," + long)
+        FetchJsonP("https://api.darksky.net/forecast/bc01f79c757619e425429fcc2e874cb0/" + lat + "," + long)
             .then((res) => {return res.json()})
             .then((json) => {
                 this.setState({
